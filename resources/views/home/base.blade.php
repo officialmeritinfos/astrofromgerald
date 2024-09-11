@@ -1,566 +1,479 @@
 
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 <meta http-equiv="content-type" content="text/html;charset=UTF-8" />
 <head>
-    <!-- ========== Meta Tags ========== -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="og:title" content="{{$siteName}}"/>
-    <meta name="og:type" content="company"/>
-    <meta name="og:url" content="/"/>
-    <meta name="og:image" content="{{asset('home/images/'.$web->logo)}}"/>
-    <meta name="og:site_name" content="{{$siteName}}"/>
-    <meta name="og:description" content="Comprehensive financial advice and investment services that are tailored to meet your individual needs."/>
-    <meta name="description" content="{{$web->description}}">
-    <meta name="keywords" content="business, marketing, agency">
-    <title> {{$siteName}} | {{$pageName}}</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invetoro - Home</title>
+    <meta name="description" content="Online platform for cryptocurrency investment">
+    <meta name="keywords" content="bitcoin,investment,ethereum,mining,trading,send bitcoin,sell,buy,crypto,cryptocurrency,online platform for cryptocurrency trading,metavat,metavat.ltd">
+    <link rel="shortcut icon" href="{{asset('home/images/'.$web->logo)}}" type="image/x-icon">
+
+
+    <link rel="apple-touch-icon" href="{{asset('home/images/'.$web->logo)}}">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Invetoro - Home">
+
+    <meta itemprop="name" content="Invetoro - Home">
+    <meta itemprop="description" content="">
+    <meta itemprop="image" content="{{asset('home/images/'.$web->logo)}}">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Invetoro - Cryptocurrency Investment System">
+    <meta property="og:description" content="Invetoro - Earn High Profit, Online investment, Online earning">
+    <meta property="og:image" content="{{asset('home/images/'.$web->logo)}}"/>
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="600" />
+    <meta property="og:image:height" content="315" />
+    <meta property="og:url" content="index">
+
+    <meta name="twitter:card" content="summary_large_image">
     <!-- favicons Icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{asset('home/images/'.$web->logo)}}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{asset('home/images/'.$web->logo)}}" />
     <link rel="icon" type="image/png" sizes="16x16" href="{{asset('home/images/'.$web->logo)}}" />
-    @stack('css')
-    <!-- ===========  All Stylesheet ================= -->
-    <!--  Icon css plugins -->
-    <link rel="stylesheet" href="{{asset('home/css/icons.css')}}">
-    <!--  magnific-popup css plugins -->
-    <link rel="stylesheet" href="{{asset('home/css/magnific-popup.css')}}">
-    <!-- slick slider menu css file -->
-    <link rel="stylesheet" href="{{asset('home/css/slick.min.css')}}">
-    <!-- animate animation css file -->
-    <link rel="stylesheet" href="{{asset('home/css/animate.min.css')}}">
-    <!--  Bootstrap css plugins -->
-    <link rel="stylesheet" href="{{asset('home/css/bootstrap.min.css')}}">
-    <!-- template main style css file -->
-    <link rel="stylesheet" href="{{asset('home/style.css')}}">
-    <style>
-        /* Custom CSS for the Float widget */
-        .telegram-float-widget {
-            position: fixed;
-            left: 10px;
-            /* Adjust the left positioning as needed */
-            bottom: 25rem;
-            /* Adjust the bottom positioning as needed */
-            z-index: 9999;
-        }
 
-        .whatsapp-float-widget {
-            position: fixed;
-            left: 70px;
-            /* Adjust the left positioning as needed */
-            bottom: 10px;
-            /* Adjust the bottom positioning as needed */
-            z-index: 9999;
-        }
-    </style>
-    <style>
-        .watkey {
-            z-index: 9;
-            position: fixed;
-            bottom: 40px;
-            left: 15px;
-            padding: 4px;
-            border: 1px solid #0d9f16;
-            border-radius: 50%;
-        }
+    <!-- fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
 
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100;200;300;400;500;600;700;800;900&amp;display=swap"
+        rel="stylesheet">
+
+
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/bootstrap/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/animate/animate.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/animate/custom-animate.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/fontawesome/css/all.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jarallax/jarallax.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/nouislider/nouislider.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/nouislider/nouislider.pips.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/odometer/odometer.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/swiper/swiper.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/notech-icons/style.css')}}">
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/notech-two-icons/style.css')}}">
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/tiny-slider/tiny-slider.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/reey-font/stylesheet.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/owl-carousel/owl.carousel.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/owl-carousel/owl.theme.default.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/bxslider/jquery.bxslider.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/bootstrap-select/css/bootstrap-select.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/vegas/vegas.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery-ui/jquery-ui.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/timepicker/timePicker.css')}}" />
+    <!-- template styles -->
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/css/invetoro.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/css/custom.css')}}" />
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/css/invetoro-responsive.css')}}" />
+    <style type="text/css">
+        .top-v5{
+            padding: 110px 0 150px 0 !important;}
     </style>
+    <!-- modes css -->
+    <link rel="stylesheet" id="jssMode" href="{{asset('home/templates/bit_gold/invetoro/assets/css/notech-light.css')}}">
+
+
+    <!-- toolbar css -->
+    <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/toolbar/css/toolbar.css')}}">
 </head>
 
-<body class="body-wrapper">
-@inject('injected','App\Defaults\Custom')
+<body>
 
-<!-- header end -->
-<header class="header header-1 transparent header-2">
-    <div class="top-header d-none d-xl-block">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-3">
-                    <div class="header-logo">
-                        <div class="logo">
-                            <a href="{{url('index')}}">
-                                <img src="{{asset('home/images/'.$web->logo)}}" alt="logo" style="width: 100px;">
-                            </a>
+<div class="preloader">
+    <img class="preloader__image" width="60" src="{{asset('home/images/'.$web->logo)}}" alt="" />
+</div>
+<!-- /.preloader -->
+<div class="page-wrapper">
+    <header class="main-header main-header-three clearfix">
+        <nav class="main-menu main-menu-three clearfix">
+            <div class="main-menu__wrapper clearfix">
+                <div class="main-menu__left main-menu__left--two">
+                    <div class="main-menu__logo">
+                        <a href="{{url('/')}}">
+                            <img class="logo-dark" src="{{asset('home/images/'.$web->logo)}}" width="143" height="39" alt="Invetoro">
+                            <img class="logo-light" src="{{asset('home/images/'.$web->logo)}}" width="143" height="39"  alt="Invetoro">
+                        </a>
+                    </div>
+                    <div class="main-menu__main-menu-box main-menu__main-menu-box--two">
+                        <a href="#" class="mobile-nav__toggler"><i class="fa fa-bars"></i></a>
+                        <ul class="main-menu__list">
+                            <li><a href="{{url('/')}}">Home</a></li>
+                            <li class="dropdown">
+                                <a href="#">About</a>
+                                <ul>
+                                    <li><a href="{{url('about')}}">About</a></li>
+                                    <li><a href="{{url('ico')}}">ICO</a></li>
+                                </ul>
+                            </li>
+
+                            <li><a href="{{url('plans')}}">Investment Plans</a></li>
+
+                            <li><a href="{{url('faq')}}">FAQ</a></li>
+                            <li><a href="{{url('contact')}}">Contact</a></li>
+                            <style type="text/css">
+                                .ekemms{
+                                    padding: 5px 10px;
+                                    border: 1px solid #2be4ac;
+                                    cursor: pointer;
+                                    background-color: transparent;
+                                    box-shadow: 0 0 5px rgb(0 0 0 / 5%);
+                                    height: 50px;
+                                    color: #fff;
+                                    border-radius: 4px;
+                                    font-size: 13px;
+                                    margin-left: 15px;
+                                    -webkit-border-radius: 4px;
+                                }
+
+                            </style>
+                        </ul>
+                    </div>
+                </div>
+                <div class="main-menu__right">
+                    <div class="main-menu__search-call">
+                        <div class="main-menu__call">
+                            <a href="{{route('login')}}" class="thm-btn product__all-btn mx-2">Login</a>
+                            <a href="{{route('register')}}" class="thm-btn product__all-btn ">Sign up</a>
+                        </div>
+                        <div class="main-menu__search-box">
+                            <a href="{{route('login')}}" class="main-menu__search  icon-magnifying-glass"></a>
                         </div>
                     </div>
                 </div>
+            </div>
+        </nav>
+    </header>
 
-                <div class="col-9">
-                    <div class="header-right-socail d-flex justify-content-end align-items-center">
-                        @if(!empty($web->phone))
-                            <a class="header-contact d-none d-md-flex align-items-center">
-                                <div class="icon color-yellow">
-                                    <i class="icon-phone"></i>
-                                </div>
-                                <div class="text">
-                                    <span class="mb-2 d-block fw-normal color-white">Call Us Today</span>
-                                    <h5 class="fw-600 color-white">{{$web->phone}}</h5>
-                                </div>
-                            </a>
-                        @endif
 
-                        <a href="mailto:{{$web->email}}" class="header-contact d-none d-md-flex align-items-center">
-                            <div class="icon color-yellow">
-                                <i class="icon-email"></i>
-                            </div>
-                            <div class="text">
-                                <span class="mb-2 d-block fw-normal color-white">E-mail Us</span>
-                                <h5 class="fw-600 color-white">{{$web->email}}</h5>
-                            </div>
-                        </a>
+    <div class="stricky-header stricked-menu main-menu main-menu-three">
+        <div class="sticky-header__content"></div><!-- /.sticky-header__content -->
+    </div><!-- /.stricky-header -->
 
-                        <a class="header-contact d-none d-md-flex align-items-center">
-                            <div class="icon color-yellow">
-                                <i class="fal fa-map-marker-alt"></i>
-                            </div>
-                            <div class="text">
-                                <span class="mb-2 d-block fw-normal color-white">Our Address</span>
-                                <h5 class="fw-600 color-white">{!! $web->address !!}</h5>
-                            </div>
-                        </a>
 
-                        <a class="header-contact d-none d-md-flex align-items-center">
-                            <div class="icon color-yellow">
-                                <i class="fal fa-clock"></i>
-                            </div>
-                            <div class="text">
-                                <span class="mb-2 d-block fw-normal color-white">Open Every Day</span>
-                                <h5 class="fw-600 color-white">8am : 12pm</h5>
-                            </div>
-                        </a>
+
+    @yield('content')
+
+
+    <!--Site Footer Start-->
+    <footer class="site-footer">
+        <div class="site-footer-bg-1 wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms"
+             style="background-image: url({{asset('home/images/shapes/site-footer-shape-1')}});">
+        </div>
+        <div class="site-footer-bg-2 wow slideInRight" data-wow-delay="100ms" data-wow-duration="2500ms"
+             style="background-image: url({{asset('home/images/shapes/site-footer-shape-2')}}');">
+        </div>
+        <div class="site-footer__top">
+            <div class="container">
+                <div class="site-footer__top-inner">
+                    <div class="site-footer__top-left">
+                        <div class="site-footer__top-icon">
+                            <span class="icon-artificial-intelligence"></span>
+                        </div>
+                        <h3 class="site-footer__top-title">Helping you overcome your technology challenges</h3>
+                    </div>
+                    <div class="site-footer__top-right">
+                        <a href="{{url('about')}}" class="thm-btn site-footer__btn">Discover more</a>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-
-    <div class="main-header-wraper">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="d-flex align-items-center justify-content-between border-top">
-                        <div class="header-logo d-block d-xl-none">
-                            <div class="logo">
-                                <a href="{{url('index')}}">
-                                    <img src="{{asset('home/images/'.$web->logo)}}" style="width: 150px;" alt="logo">
-                                </a>
+        <div class="site-footer__middle">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                        <div class="footer-widget__column footer-widget__about">
+                            <div class="footer-widget__logo">
+                                <a href="{{url('/')}}"><img src="{{asset('home/images/'.$web->logo)}}" width="143" height="39" alt=""></a>
                             </div>
+                            <div class="footer-widget__about-text-box">
+                                <p class="footer-widget__about-text">Subsrcibe for our upcoming latest articles and
+                                    news resources</p>
+                            </div>
+                            <form class="footer-widget__newsletter-form subscribe-form" method="post">
+                                <input type="hidden" name="_token" value="kocVwb7AGyTQ4D7IyYs8Qvku8MVuovNSFrDyEScG">                                    <div class="footer-widget__newsletter-input-box">
+                                    <input type="email" placeholder="Email address" name="email">
+                                    <button type="submit" class="footer-widget__newsletter-btn"><img
+                                            src="{{asset('home/templates/bit_gold/invetoro/assets/images/icon/footer-widget-newsletter-send-icon.png')}}"
+                                            alt=""></button>
+                                </div>
+                            </form>
                         </div>
-
-                        <div class="social-profile last_no_bullet d-xl-block d-none">
-                            <ul>
-                                <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                                <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                                <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                                <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                    </div>
+                    <div class="col-xl-2 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                        <div class="footer-widget__column footer-widget__links clearfix">
+                            <h3 class="footer-widget__title">Links</h3>
+                            <ul class="footer-widget__links-list list-unstyled clearfix">
+                                <li class="list-item"><a href="{{url('/')}}">Home</a></li>
+                                <li class="list-item"><a  href="{{url('plans')}}">Investment Plans</a></li>
+                                <li class="list-item"><a  href="{{route('register')}}">Open Account</a></li>
+                                <li class="list-item"><a  href="{{route('login')}}">Login Account</a></li>
+                                <li class="list-item"><a href="{{url('contact')}}">Contact</a></li>
                             </ul>
                         </div>
-
-                        <div class="header-menu d-none d-xl-block">
-                            <div class="main-menu">
-                                <ul>
-                                    <li>
-                                        <a href="{{url('index')}}">Home</a>
-                                    </li>
-                                    <li>
-                                        <a href="{{url('about')}}">About</a>
-                                    </li>
-                                    <li>
-                                        <a href="#">Our Services</a>
-
-                                        <ul>
-                                            @foreach($injected->getServices() as $service)
-                                                <li><a href="{{route('service.details',['id'=>$service->id])}}" >{{$service->title}}</a></li>
-                                            @endforeach
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a>Pages</a>
-
-                                        <ul>
-                                            <li><a href="{{url('plans')}}" >Plans</a></li>
-                                            <li><a href="{{url('faqs')}}" >Frequently Asked Questions</a></li>
-                                            <li><a href="{{url('terms')}}" >Terms & Conditions</a></li>
-                                            <li><a href="{{url('privacy')}}">Privacy policy</a></li>
-                                        </ul>
-                                    </li>
-
-                                    <li>
-                                        <a href="#">Portal</a>
-
-                                        <ul>
-                                            <li><a href="{{route('login')}}">Login</a></li>
-
-                                            <li><a href="{{route('register')}}">Register</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="header-right d-flex align-items-center">
-
-                            <div class="mobile-nav-bar d-block ml-3 ml-sm-5 d-xl-none">
-                                <div class="mobile-nav-wrap">
-                                    <div id="hamburger">
-                                        <i class="fal fa-bars"></i>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</header>
-
-<!-- mobile menu - responsive menu  -->
-<div class="mobile-nav mobile-nav-yellow">
-    <button type="button" class="close-nav">
-        <i class="fal fa-times-circle"></i>
-    </button>
-
-    <nav class="sidebar-nav">
-        <div class="navigation">
-            <div class="consulter-mobile-nav">
-                <ul>
-                    <li>
-                        <a href="{{url('index')}}">Home</a>
-                    </li>
-                    <li>
-                        <a href="{{url('about')}}">About</a>
-                    </li>
-                    <li>
-                        <a href="#">Our Services</a>
-
-                        <ul>
-                            @foreach($injected->getServices() as $service)
-                                <li><a href="{{route('service.details',['id'=>$service->id])}}" >{{$service->title}}</a></li>
-                            @endforeach
-                        </ul>
-                    </li>
-                    <li>
-                        <a>Pages</a>
-
-                        <ul>
-                            <li><a href="{{url('plans')}}" >Plans</a></li>
-                            <li><a href="{{url('faqs')}}" >Frequently Asked Questions</a></li>
-                            <li><a href="{{url('terms')}}" >Terms & Conditions</a></li>
-                            <li><a href="{{url('privacy')}}">Privacy policy</a></li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <a href="#">Portal</a>
-
-                        <ul>
-                            <li><a href="{{route('login')}}">Login</a></li>
-
-                            <li><a href="{{route('register')}}">Register</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="sidebar-nav__bottom mt-20">
-                <div class="sidebar-nav__bottom-contact-infos mb-20">
-                    <h6 class="color-black mb-5">Contact Info</h6>
-
-                    <ul>
-                        <li><a><i class="fal fa-clock"></i> Mon – Fri: 8.00 – 18.00</a></li>
-                        <li><a href="mailto:{{$web->email}}"><i class="icon-email"></i>{{$web->email}}</a></li>
-                        @if(!empty($web->phone))
-                            <li>
-                                <a  class="header-contact d-flex align-items-center">
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="300ms">
+                        <div class="footer-widget__column footer-widget__contact clearfix">
+                            <h3 class="footer-widget__title">Contact</h3>
+                            <ul class="footer-widget__contact-list list-unstyled clearfix">
+                                @if(!empty($web->phone))
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-telephone"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p><a href="tel:{{$web->phone}}">{{$web->phone}}</a></p>
+                                        </div>
+                                    </li>
+                                @endif
+                                <li>
                                     <div class="icon">
-                                        <i class="icon-call"></i>
-                                        <!-- <img src="{{asset('home/img/icon/phone-1.svg')}}" alt=""> -->
+                                        <span class="icon-email"></span>
                                     </div>
                                     <div class="text">
-                                        <span class="font-la mb-5 d-block fw-500">Contact For Support</span>
-                                        <h5 class="fw-500">{{$web->phone}}</h5>
-                                    </div>
-                                </a>
-                            </li>
-                        @endif
-
-                    </ul>
-                </div>
-
-                <div class="sidebar-nav__bottom-social">
-                    <h6 class="color-black mb-5">Follow On:</h6>
-
-                    <ul>
-                        <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-</div>
-<div class="offcanvas-overlay"></div> <!-- offcanvas-overlay -->
-<!-- header end -->
-
-@yield('content')
-
-<!--<div class="telegram-float-widget">
-    <a href="https://wa.me/{{$web->phone}}" target="_blank">
-        <img src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-256.png" alt="" width="50">
-    </a>
-</div>-->
-<!-- footer start -->
-<footer class="footer-1 footer-2 overflow-hidden" style="background-image: url({{asset('home/img/footer/footer-bg-2.png')}});">
-
-    <div class="footer-top mb-xs-25 mb-sm-30 mb-md-35 mb-lg-40 mb-50 overflow-hidden">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="single-footer-wid site_info_box">
-                        <a href="{{url('/')}}" class="d-block mb-20">
-                            <img src="{{asset('home/images/'.$web->logo)}}" alt="">
-                        </a>
-
-                        <div class="description font-la color-white">
-                            <p>
-                                We are a business inclined profitable investment company with all the right tools and experts
-                                to help you grow your investment
-                            </p>
-                        </div>
-                    </div>
-                </div
-            </div>
-        </div>
-    </div>
-
-    <div class="container">
-        <div class="row justify-content-between">
-
-            <div class="col-md-4 col-xl-4">
-                <div class="single-footer-wid contact_widget">
-                    <h4 class="wid-title mb-30 color-white">Working Time</h4>
-
-                    <div class="contact-wrapper pt-30 pr-30 pb-30 pl-30">
-                        <div class="wid-contact pb-30 mb-25">
-                            <ul>
-                                <li>
-                                    <div class="icon">
-                                        <i class="far fa-clock"></i>
-                                    </div>
-
-                                    <div class="contact-info font-la color-white">
-                                        <p>Mon - Sat / 08am : 9pm</p>
+                                        <p><a href="mailto:{{$web->email}}">{{$web->email}}</a></p>
                                     </div>
                                 </li>
-
                                 <li>
                                     <div class="icon">
-                                        <i class="far fa-clock"></i>
+                                        <span class="icon-pin"></span>
                                     </div>
-
-                                    <div class="contact-info font-la color-white">
-                                        <p>Sat. - Sun / 08am : 5pm</p>
-                                    </div>
-                                </li>
-
-                                <li>
-                                    <div class="icon">
-                                        <i class="far fa-map"></i>
-                                    </div>
-
-                                    <div class="contact-info font-la color-white">
-                                        <p>{!! $web->address !!}</p>
+                                    <div class="text">
+                                        <p>
+                                            {!! $web->address !!}
+                                        </p>
                                     </div>
                                 </li>
-
                             </ul>
                         </div>
-
                     </div>
-                </div>
-            </div> <!-- /.col-lg-3 - single-footer-wid -->
-
-            <div class="col-md-4 col-xl-4">
-                <div class="single-footer-wid pl-xl-10 pl-50">
-                    <h4 class="wid-title mb-30 color-white">Quick Link</h4>
-
-                    <ul>
-                        <li >
-                            <a href="{{url('terms')}}">Legal Information</a>
-                        </li>
-                        <li >
-                            <a  href="{{url('privacy')}}">Privacy Policy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div> <!-- /.col-lg-2 - single-footer-wid -->
-
-            <div class="col-md-4 col-xl-4">
-                <div class="single-footer-wid pl-xl-10 pl-50">
-                    <h4 class="wid-title mb-30 color-white">Resource Link</h4>
-
-                    <ul>
-                        <li >
-                            <a  href="{{url('contact')}}">Contact</a>
-                        </li>
-                        <li >
-                            <a href="{{url('about')}}">Knowledge Base</a>
-                        </li>
-                        <li >
-                            <a  href="{{url('faq')}}">FAQs</a>
-                        </li>
-                        <li >
-                            <a  href="{{url('/')}}">System Status</a>
-                        </li>
-                    </ul>
-                </div>
-            </div> <!-- /.col-lg-2 - single-footer-wid -->
-
-
-        </div>
-    </div>
-
-    <div class="footer-bottom overflow-hidden">
-        <div class="container">
-            <div class="footer-bottom-content d-flex flex-column flex-md-row justify-content-between align-items-center">
-                <div class="coppyright text-center text-md-start">
-                    &copy; 2016 -  {{date('Y')}} <a href="{{url('/')}}">{{$siteName}}</a> | All Rights Reserved.
-                </div>
-
-                <div class="footer-bottom-list last_no_bullet">
-                    <ul>
-                        <li><a href="{{url('terms')}}">Terms & Conditions</a></li>
-                        <li><a href="{{url('privacy')}}">Privacy Policy</a></li>
-                    </ul>
+                    <div class="col-xl-3 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                        <div class="footer-widget__column footer-widget__social-box clearfix">
+                            <div class="site-footer__social">
+                                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                                <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
+        <div class="site-footer__bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xl-12">
+                        <div class="site-footer__bottom-inner">
+                            <p class="site-footer__bottom-text">Copyright © 2017 - {{date('Y')}} <a href="{{url('/')}}" ><strong>{{$siteName}}</strong></a>. All Rights Reserved</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!--Site Footer End-->
+
+
+</div><!-- /.page-wrapper -->
+
+
+<div class="mobile-nav__wrapper">
+    <div class="mobile-nav__overlay mobile-nav__toggler"></div>
+    <!-- /.mobile-nav__overlay -->
+    <div class="mobile-nav__content">
+        <span class="mobile-nav__close mobile-nav__toggler"><i class="fa fa-times"></i></span>
+
+        <div class="logo-box">
+            <a href="{{url('/')}}" aria-label="logo image"><img src="{{asset('home/images/'.$web->logo)}}"
+                                                              width="155" alt="" /></a>
+        </div>
+        <!-- /.logo-box -->
+        <div class="mobile-nav__container"></div>
+        <!-- /.mobile-nav__container -->
+
+
+        <a href="{{route('login')}}" class="thm-btn product__all-btn mt-2">Login</a>
+        <a href="{{route('register')}}" class="thm-btn product__all-btn mt-2">Sign up</a>
+
+        <ul class="mobile-nav__contact list-unstyled">
+            <li>
+                <i class="fa fa-envelope"></i>
+                <a href="mailto:{{$web->email}}">{{$web->email}}</a>
+            </li>
+            @if(!empty($web->phone))
+                <li>
+                    <i class="fa fa-phone-alt"></i>
+                    <a href="tel:{{$web->phone}}">{{$web->phone}}</a>
+                </li>
+            @endif
+        </ul><!-- /.mobile-nav__contact -->
+        <div class="mobile-nav__top">
+            <div class="mobile-nav__social">
+                <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://www.twitter.com/" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
+                <a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+            </div><!-- /.mobile-nav__social -->
+        </div><!-- /.mobile-nav__top -->
+
+
     </div>
-</footer>
-<!-- footer end -->
-
-<!--  ALl JS Plugins
-====================================== -->
-<script src="{{asset('home/js/jquery.min.js')}}"></script>
-<script src="{{asset('home/js/modernizr.min.js')}}"></script>
-<script src="{{asset('home/js/jquery.easing.js')}}"></script>
-<script src="{{asset('home/js/popper.min.js')}}"></script>
-<script src="{{asset('home/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('home/js/slick.min.js')}}"></script>
-<script src="{{asset('home/js/scrollUp.min.js')}}"></script>
-<script src="{{asset('home/js/counterup.min.js')}}"></script>
-<script src="{{asset('home/js/jquery.sticky-kit.js')}}"></script>
-<script src="{{asset('home/js/magnific-popup.min.js')}}"></script>
-<script src="{{asset('home/js/jquery.easypiechart.min.js')}}"></script>
-<script src="{{asset('home/js/active.js')}}"></script>
-<!-- Google language start -->
-<style>
-
-    #google_translate_element {
-        z-index: 9999999;
-        position: fixed;
-        bottom: 25px;
-        left: 15px;
-    }
-
-    .goog-te-gadget {
-        font-family: Roboto, "Open Sans", sans-serif !important;
-        text-transform: uppercase;
-    }
-    .goog-te-gadget-simple
-    {
-        padding: 0px !important;
-        line-height: 1.428571429;
-        color: white;
-        vertical-align: middle;
-        background-color: black;
-        border: 1px solid #a5a5a599;
-        border-radius: 4px;
-        float: right;
-        margin-top: -4px;
-        z-index: 999999;
-    }
-    .goog-te-banner-frame.skiptranslate
-    {
-        display: none !important;
-        color: white;
-    }
-    .goog-te-gadget-icon
-    {
-        background: none !important;
-        display: none;
-        color: white;
-    }
-    .goog-te-gadget-simple .goog-te-menu-value
-    {
-        font-size: 12px;
-        color: white;
-        font-family: 'Open Sans' , sans-serif;
-    }
-</style>
-<div id="google_translate_element"></div>
-<script type="text/javascript">
-    window.onload = function googleTranslateElementInit() {
-        new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
-    }
-</script>
-<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-<!-- start popup massage -->
-<div class="notifier" style="display: none;">
-    <div class="txt" style="color:black;">While you are waiting,someone from <b></b> just traded with <a href="javascript:void(0);" onclick="javascript:void(0);"></a></div>
+    <!-- /.mobile-nav__content -->
 </div>
-<style>
-    .notifier{
-        border-radius: 7px;
-        position: fixed;
-        z-index: 90;
-        bottom: 80px;
-        right: 50px;
-        background: #fff;
-        padding: 15px 40px;
-        box-shadow: 0px 5px 13px 0px rgba(0,0,0,.3);
-    }
-    .notifier a {
-        font-weight: 700;
-        display: block;
-        color:#0080FF;
-    }
-    .notifier a, .notifier a:active {
-        transition: all .2s ease;
-        color:#0080FF;
-    }
-</style>
-<script data-cfasync="false" src="#"></script><script type="text/javascript">
-    var listCountries = ['Germany', 'Spain', 'Russia', 'Italy',
-        'Italy',  'United States', 'Egypt',
-        'United Kingdom', "United States","England","Germany","Germany","United States","Switzerland",
-        "Austria","Austria","Austria","Australia","Australia","Australia","Russia","Russia",
-        "United States","United Kingdom","Spain","Spain","India","England","Italy","Ukraine"
-    ];
-    var listPlans = ['$500','$5000','$1,000','$1000','$550','$3000','$690', '$360',
-        '$700', '$600',"$500","$700","$1,000","$1289","$5000","$7000","$10000"];
-    interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
-    var run = setInterval(request, interval);
+<!-- /.mobile-nav__wrapper -->
 
-    function request() {
-        clearInterval(run);
-        interval = Math.floor(Math.random() * (40000 - 8000 + 1) + 8000);
-        var country = listCountries[Math.floor(Math.random() * listCountries.length)];
-        var plan = listPlans[Math.floor(Math.random() * listPlans.length)];
-        var msg = 'While you are still contemplating ,an investor from <b>' + country + '</b> ' +
-            'just traded with <a href="javascript:void(0);" onclick="javascript:void(0);">' + plan + ' .</a>';
-        $(".notifier .txt").html(msg);
-        $(".notifier").stop(true).fadeIn(300);
-        window.setTimeout(function() {
-            $(".notifier").stop(true).fadeOut(300);
-        }, 6000);
-        run = setInterval(request, interval);
+<a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
+
+
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery/jquery-3.6.0.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jarallax/jarallax.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery-ajaxchimp/jquery.ajaxchimp.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery-appear/jquery.appear.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery-circle-progress/jquery.circle-progress.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery-magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery-validate/jquery.validate.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/nouislider/nouislider.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/odometer/odometer.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/swiper/swiper.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/tiny-slider/tiny-slider.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/wnumb/wNumb.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/wow/wow.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/isotope/isotope.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/countdown/countdown.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/owl-carousel/owl.carousel.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/bxslider/jquery.bxslider.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/bootstrap-select/js/bootstrap-select.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/vegas/vegas.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery-ui/jquery-ui.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/timepicker/timePicker.js')}}"></script>
+
+<!-- template js -->
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/js/clock.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/js/invetoro.js')}}"></script>
+
+<!-- toolbar js -->
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/toolbar/js/js.cookie.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/toolbar/js/jQuery.style.switcher.min.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/toolbar/js/toolbar.js')}}"></script>
+<script src="{{asset('home/templates/bit_gold/js/app.js')}}"></script>
+<link rel="stylesheet" href="{{asset('home/templates/bit_gold/css/iziToast.min.css')}}">
+<script src="{{asset('home/templates/bit_gold/js/iziToast.min.js')}}"></script>
+
+
+<script>
+    "use strict";
+    function notify(status,message) {
+        iziToast[status]({
+            message: message,
+            position: "topRight"
+        });
     }
 </script>
-<!-- end popup massage -->
-@stack('js')
+
+
+
+
+<script>
+    (function ($) {
+        "use strict";
+        $(document).ready(function () {
+            $("#changePlan").on('change', function () {
+                var planId = $("#changePlan option:selected").val();
+                var investAmount = $('.invest-input').val();
+                var profitInput = $('.profit-input').val('');
+
+                $('.period').text('');
+
+                if (investAmount != '' && planId != null) {
+                    ajaxPlanCalc(planId, investAmount)
+                }
+            });
+
+            $(".invest-input").on('change', function () {
+                var planId = $("#changePlan option:selected").val();
+                var investAmount = $(this).val();
+                var profitInput = $('.profit-input').val('');
+                $('.period').text('');
+                if (investAmount != '' && planId != null) {
+                    ajaxPlanCalc(planId, investAmount)
+                }
+            });
+        });
+        function ajaxPlanCalc(planId, investAmount) {
+            $.ajax({
+                url: "https://www.invetoro.com/planCalculator",
+                type: "post",
+                data: {
+                    planId,
+                    investAmount
+                },
+                success: function (response) {
+                    var alertStatus = "";
+                    if (response.errors) {
+                        iziToast.error({message: response.errors, position: "topRight"});
+                    }else{
+                        var msg = `${response.description}`
+                        $('.profit-input').val(msg);
+                        if(response.netProfit){
+                            $('.period').text('Net Profit '+response.netProfit);
+                        }
+                    }
+                }
+            });
+        }
+    })(jQuery);
+
+</script>
+<script>
+    (function ($) {
+        "use strict";
+        $(document).on('click','.investButton',function () {
+            var data = $(this).data('resource');
+            var symbol = "$";
+            var currency = "USD";
+
+            $('#mySelect').empty();
+
+            if (data.fixed_amount == '0') {
+                $('.investAmountRenge').text(`invest: ${symbol}${data.minimum} - ${symbol}${data.maximum}`);
+                $('.fixedAmount').val('');
+                $('#fixedAmount').attr('readonly', false);
+
+
+            } else {
+                $('.investAmountRenge').text(`invest: ${symbol}${data.fixed_amount}`);
+                $('.fixedAmount').val(data.fixed_amount);
+                $('#fixedAmount').attr('readonly', true);
+
+            }
+
+            if (data.interest_status == '1') {
+                $('.interestDetails')(`<strong> Interest: ${data.interest} % </strong>`);
+            } else {
+                $('.interestDetails')(`<strong> Interest: ${data.interest} ${currency}  </strong>`);
+            }
+            if (data.lifetime_status == '0') {
+                $('.interestValidaty')(`<strong>  per ${data.times} hours ,  ${data.repeat_time} times</strong>`);
+            } else {
+                $('.interestValidaty')(`<strong>  per ${data.times} hours,  life time </strong>`);
+            }
+
+            $('.planName').text(data.name);
+            $('.plan_id').val(data.id);
+        });
+
+
+
+    })(jQuery);
+
+</script>
+
 
 </body>
 </html>
