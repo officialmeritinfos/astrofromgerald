@@ -126,7 +126,7 @@
 /* lang bar  */
 
 .skiptranslate {
-	display: none !important;
+	display: block !important;
 }
 
 /* body fix */

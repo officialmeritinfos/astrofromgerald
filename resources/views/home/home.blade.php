@@ -21,7 +21,7 @@
                     <div class="supportBl">
                         <span class="iconBl icon-email-32"></span>
                         <span class="tit">support</span>
-                        <a href="mailto:{{$web->emaol}}" class="link">{{$web->email}}</a>
+                        <a href="mailto:{{$web->email}}" class="link">{{$web->email}}</a>
                     </div>
                 </div>
                 <div class="grettingsMain wow slideInLeft">
@@ -588,7 +588,7 @@
                     <div class="notech-more__right">
                         <div class="notech-more__img wow slideInRight" data-wow-delay="100ms"
                              data-wow-duration="2500ms">
-                            <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/invetoro_certificate.jpg')}}" alt="">
+                            <img src="{{asset('home/images/certificate.jpeg')}}" alt="">
                         </div>
                     </div>
                 </div>

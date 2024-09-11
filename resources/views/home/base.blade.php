@@ -80,6 +80,39 @@
 
     <!-- toolbar css -->
     <link rel="stylesheet" href="{{asset('home/templates/bit_gold/invetoro/assets/vendors/toolbar/css/toolbar.css')}}">
+    <style>
+        /* Custom CSS for the Float widget */
+        .telegram-float-widget {
+            position: fixed;
+            left: 10px;
+            /* Adjust the left positioning as needed */
+            bottom: 25rem;
+            /* Adjust the bottom positioning as needed */
+            z-index: 9999;
+        }
+
+        .whatsapp-float-widget {
+            position: fixed;
+            left: 70px;
+            /* Adjust the left positioning as needed */
+            bottom: 10px;
+            /* Adjust the bottom positioning as needed */
+            z-index: 9999;
+        }
+    </style>
+    <style>
+        .watkey {
+            z-index: 9;
+            position: fixed;
+            bottom: 40px;
+            left: 15px;
+            padding: 4px;
+            border: 1px solid #0d9f16;
+            border-radius: 50%;
+        }
+
+    </style>
+    @stack('css')
 </head>
 
 <body>
@@ -115,22 +148,6 @@
 
                             <li><a href="{{url('faq')}}">FAQ</a></li>
                             <li><a href="{{url('contact')}}">Contact</a></li>
-                            <style type="text/css">
-                                .ekemms{
-                                    padding: 5px 10px;
-                                    border: 1px solid #2be4ac;
-                                    cursor: pointer;
-                                    background-color: transparent;
-                                    box-shadow: 0 0 5px rgb(0 0 0 / 5%);
-                                    height: 50px;
-                                    color: #fff;
-                                    border-radius: 4px;
-                                    font-size: 13px;
-                                    margin-left: 15px;
-                                    -webkit-border-radius: 4px;
-                                }
-
-                            </style>
                         </ul>
                     </div>
                 </div>
@@ -159,6 +176,13 @@
     @yield('content')
 
 
+    <div class="telegram-float-widget">
+        <a href="https://wa.me/{{$web->phone}}" target="_blank">
+            <img src="https://cdn2.iconfinder.com/data/icons/social-media-applications/64/social_media_applications_23-whatsapp-256.png" alt="" width="50">
+        </a>
+    </div>
+
+    <div id="google_translate_element"></div>
     <!--Site Footer Start-->
     <footer class="site-footer">
         <div class="site-footer-bg-1 wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms"
@@ -330,6 +354,8 @@
 <a href="#" data-target="html" class="scroll-to-target scroll-to-top"><i class="fa fa-angle-up"></i></a>
 
 
+
+
 <script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery/jquery-3.6.0.min.js')}}"></script>
 <script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
 <script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jarallax/jarallax.min.js')}}"></script>
@@ -365,6 +391,57 @@
 <link rel="stylesheet" href="{{asset('home/templates/bit_gold/css/iziToast.min.css')}}">
 <script src="{{asset('home/templates/bit_gold/js/iziToast.min.js')}}"></script>
 
+<!-- Google language start -->
+<style>
+
+    #google_translate_element {
+        z-index: 9999999;
+        position: fixed;
+        bottom: 25px;
+        left: 15px;
+    }
+
+    .goog-te-gadget {
+        font-family: Roboto, "Open Sans", sans-serif !important;
+        text-transform: uppercase;
+    }
+    .goog-te-gadget-simple
+    {
+        padding: 0px !important;
+        line-height: 1.428571429;
+        color: white;
+        vertical-align: middle;
+        background-color: black;
+        border: 1px solid #a5a5a599;
+        border-radius: 4px;
+        float: right;
+        margin-top: -4px;
+        z-index: 999999;
+    }
+    .goog-te-banner-frame.skiptranslate
+    {
+        display: none !important;
+        color: white;
+    }
+    .goog-te-gadget-icon
+    {
+        background: none !important;
+        display: none;
+        color: white;
+    }
+    .goog-te-gadget-simple .goog-te-menu-value
+    {
+        font-size: 12px;
+        color: white;
+        font-family: 'Open Sans' , sans-serif;
+    }
+</style>
+<script type="text/javascript">
+    function googleTranslateElementInit() {
+        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+    }
+</script>
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <script>
     "use strict";
@@ -376,104 +453,7 @@
     }
 </script>
 
-
-
-
-<script>
-    (function ($) {
-        "use strict";
-        $(document).ready(function () {
-            $("#changePlan").on('change', function () {
-                var planId = $("#changePlan option:selected").val();
-                var investAmount = $('.invest-input').val();
-                var profitInput = $('.profit-input').val('');
-
-                $('.period').text('');
-
-                if (investAmount != '' && planId != null) {
-                    ajaxPlanCalc(planId, investAmount)
-                }
-            });
-
-            $(".invest-input").on('change', function () {
-                var planId = $("#changePlan option:selected").val();
-                var investAmount = $(this).val();
-                var profitInput = $('.profit-input').val('');
-                $('.period').text('');
-                if (investAmount != '' && planId != null) {
-                    ajaxPlanCalc(planId, investAmount)
-                }
-            });
-        });
-        function ajaxPlanCalc(planId, investAmount) {
-            $.ajax({
-                url: "https://www.invetoro.com/planCalculator",
-                type: "post",
-                data: {
-                    planId,
-                    investAmount
-                },
-                success: function (response) {
-                    var alertStatus = "";
-                    if (response.errors) {
-                        iziToast.error({message: response.errors, position: "topRight"});
-                    }else{
-                        var msg = `${response.description}`
-                        $('.profit-input').val(msg);
-                        if(response.netProfit){
-                            $('.period').text('Net Profit '+response.netProfit);
-                        }
-                    }
-                }
-            });
-        }
-    })(jQuery);
-
-</script>
-<script>
-    (function ($) {
-        "use strict";
-        $(document).on('click','.investButton',function () {
-            var data = $(this).data('resource');
-            var symbol = "$";
-            var currency = "USD";
-
-            $('#mySelect').empty();
-
-            if (data.fixed_amount == '0') {
-                $('.investAmountRenge').text(`invest: ${symbol}${data.minimum} - ${symbol}${data.maximum}`);
-                $('.fixedAmount').val('');
-                $('#fixedAmount').attr('readonly', false);
-
-
-            } else {
-                $('.investAmountRenge').text(`invest: ${symbol}${data.fixed_amount}`);
-                $('.fixedAmount').val(data.fixed_amount);
-                $('#fixedAmount').attr('readonly', true);
-
-            }
-
-            if (data.interest_status == '1') {
-                $('.interestDetails')(`<strong> Interest: ${data.interest} % </strong>`);
-            } else {
-                $('.interestDetails')(`<strong> Interest: ${data.interest} ${currency}  </strong>`);
-            }
-            if (data.lifetime_status == '0') {
-                $('.interestValidaty')(`<strong>  per ${data.times} hours ,  ${data.repeat_time} times</strong>`);
-            } else {
-                $('.interestValidaty')(`<strong>  per ${data.times} hours,  life time </strong>`);
-            }
-
-            $('.planName').text(data.name);
-            $('.plan_id').val(data.id);
-        });
-
-
-
-    })(jQuery);
-
-</script>
-
+@stack('js')
 
 </body>
 </html>
