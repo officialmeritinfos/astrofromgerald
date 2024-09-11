@@ -1,185 +1,96 @@
 @extends('home.base')
 @section('content')
-    @push('css')
-        <style>
-            .single-price {
-                text-align: center;
-                background: #262626;
-                transition: .7s;
-                margin-top: 20px;
-            }
-            .single-price h3 {
-                font-size: 30px;
-                color: #000;
-                font-weight: 600;
-                text-align: center;
-                margin: 0;
-                margin-top: -80px;
-                margin-bottom: 1rem;
-                font-family: poppins;
-                color: #fff;
-            }
-            .single-price h4 {
-                font-size: 20px;
-                font-weight: 500;
-                color: #fff;
-            }
-            .single-price h4 span.sup {
-                vertical-align: text-top;
-                font-size: 15px;
-            }
-            .deal-top {
-                position: relative;
-                background: rgba(255, 156, 0, 0.9);
-                font-size: 16px;
-                text-transform: uppercase;
-                padding: 136px 24px 0;
-            }
-            .deal-top::after {
-                content: "";
-                position: absolute;
-                left: 0;
-                bottom: -50px;
-                width: 0;
-                height: 0;
-                border-top: 50px solid rgba(255, 156, 0, 0.9);
-                border-left: 175px solid transparent;
-                border-right: 183px solid transparent;
-            }
-            .deal-bottom {
-                padding: 56px 16px 0;
-            }
-            .deal-bottom ul {
-                margin: 0;
-                padding: 0;
-            }
-            .deal-bottom  ul li {
-                font-size: 16px;
-                color: #fff;
-                font-weight: 300;
-                margin-top: 16px;
-                border-top: 1px solid #E4E4E4;
-                padding-top: 16px;
-                list-style: none;
-            }
-            .btn-area a {
-                display: inline-block;
-                font-size: 18px;
-                color: #fff;
-                background: rgba(255, 156, 0, 0.9);
-                padding: 8px 64px;
-                margin-top: 32px;
-                border-radius: 4px;
-                margin-bottom: 40px;
-                text-transform: uppercase;
-                font-weight: bold;
-                text-decoration: none;
-            }
-
-
-            .single-price:hover {
-                background: rgba(255, 156, 0, 0.9);
-            }
-            .single-price:hover .deal-top {
-                background: #262626;
-            }
-            .single-price:hover .deal-top:after {
-                border-top: 50px solid #262626;
-            }
-            .single-price:hover .btn-area a {
-                background: #262626;
-            }
-            /* ignore the code below */
-
-
-            .link-area
-            {
-                position:fixed;
-                bottom:20px;
-                left:20px;
-                padding:15px;
-                border-radius:40px;
-                background:rgba(255, 156, 0, 0.9);
-            }
-            .link-area a
-            {
-                text-decoration:none;
-                color:#fff;
-                font-size:25px;
-            }
-            small {
-                font-size: 12px;
-                text-transform: initial;
-            }
-        </style>
-    @endpush
-    <!-- page-banner start -->
-    <section class="page-banner pt-xs-60 pt-sm-80 overflow-hidden">
+    <!--Page Header Start-->
+    <section class="page-header mb-3">
+        <div class="page-header-bg" style="background-image: url({{asset('home/templates/bit_gold/invetoro/assets/images/banner.jpg')}})">
+        </div>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="page-banner__content mb-xs-10 mb-sm-15 mb-md-15 mb-20">
-                        <div class="transparent-text">{{$pageName}}</div>
-                        <div class="page-title">
-                            <h1>{{$pageName}}</h1>
-                        </div>
-                    </div>
-
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$pageName}}</li>
-                        </ol>
-                    </nav>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="page-banner__media mt-xs-30 mt-sm-40">
-                        <img src="{{asset('home/img/page-banner/page-banner-start.svg')}}" class="img-fluid start" alt="">
-                        <img src="{{asset('home/img/page-banner/page-banner.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                </div>
+            <div class="page-header__inner">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{url('/')}}">Home</a></li>
+                    <li><span>/</span></li>
+                    <li class="active">{{$pageName}}</li>
+                </ul>
+                <h2>{{$pageName}}</h2>
             </div>
         </div>
     </section>
-    <!-- page-banner end -->
+    <!--Page Header End-->
 
-    <div class="pricing-area" style="margin-bottom: 5rem;margin-top: 5rem;">
+    <!--Pricing Start-->
+    <section class="pricing">
         <div class="container">
+            <div class="we-stand__top">
+                <div class="we-stand__top-title-box">
+                    <div class="we-stand__top-title-box-bg">
+                    </div>
+                    <h2 style="background-image: url({{asset('home/templates/bit_gold/invetoro/assets/images/backgrounds/tech-bg-1-1.jpg')}});"
+                        class="we-stand__top-title">Investment Plans</h2>
+                </div>
+                <div class="we-stand-shape">
+                    <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/shapes/we-stand-shape.png')}}" alt="">
+                </div>
+            </div>
             <div class="row justify-content-center">
                 @foreach($packages as $package)
                     @inject('option','App\Defaults\Custom')
-                    <div class="col-md-4 col-sm-6 col-xs-12">
-                        <div class="single-price">
-                            <div class="deal-top">
-                                <h3>{{$package->name}}</h3>
-                                <h4> {{$package->roi}}%/ <span class="sup">{{$option->getReturnType($package->returnType)}}</span> </h4>
-                                <small class="text-white">{{$package->note}}</small>
+                    <div class="col-xl-4 col-lg-4">
+                        <!--Pricing Single-->
+                        <div class="pricing__single">
+                            <div class="pricing__icon">
+                                <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/icon/pricing-icon-1.png')}}" alt="">
                             </div>
-                            <div class="deal-bottom">
-                                <ul class="deal-item">
+                            <h3 class="pricing__title">{{$package->name}}</h3>
+                            <h2 class="pricing__rate">{{$package->roi}}% <span>/{{$option->getReturnType($package->returnType)}}</span></h2>
+
+                            <div class="pricing__service">
+                                <ul class="list-unstyled pricing__service-list">
                                     <li>
-                                        Price: ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
-                                            ${{number_format($package->maxAmount,2)}}
-                                        @else
-                                            Unlimited
-                                        @endif
+                                        <div class="icon">
+                                            <span class="icon-tick"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>For   {{$package->Duration}} </p>
+                                        </div>
                                     </li>
-                                    <li>Profit return: {{$package->roi}}% {{$option->getReturnType($package->returnType)}}</li>
-                                    <li>Contract Duration: {{$package->Duration}}</li>
-                                    <li>Referral Bonus: {{$package->referral}}% </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-tick"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                Total   {{$package->roi*$package->numberOfReturns}}%
+
+                                                + <span class="badge bg-success">Capital</span>
+                                            </p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="icon">
+                                            <span class="icon-tick"></span>
+                                        </div>
+                                        <div class="text">
+                                            <p>
+                                                ${{number_format($package->minAmount,2)}} - @if($package->isUnlimited !=1)
+                                                    ${{number_format($package->maxAmount,2)}}
+                                                @else
+                                                    Unlimited
+                                                @endif
+                                            </p>
+                                        </div>
+                                    </li>
                                 </ul>
-                                <div class="btn-area">
-                                    <a href="{{route('register')}}">Get Started</a>
-                                </div>
                             </div>
+                            <a href="{{route('register')}}" data-toggle="modal" data-target="#depoModal" data-resource="{&quot;id&quot;:14,&quot;name&quot;:&quot;Standard Crypto&quot;,&quot;minimum&quot;:&quot;100&quot;,&quot;maximum&quot;:&quot;4999&quot;,&quot;fixed_amount&quot;:&quot;0&quot;,&quot;interest&quot;:&quot;2.5&quot;,&quot;interest_status&quot;:&quot;1&quot;,&quot;times&quot;:&quot;168&quot;,&quot;status&quot;:&quot;1&quot;,&quot;featured&quot;:&quot;1&quot;,&quot;capital_back_status&quot;:&quot;1&quot;,&quot;lifetime_status&quot;:&quot;0&quot;,&quot;repeat_time&quot;:&quot;180&quot;,&quot;created_at&quot;:&quot;2019-12-18T23:08:17.000000Z&quot;,&quot;updated_at&quot;:&quot;2022-12-23T22:24:31.000000Z&quot;}" class="thm-btn pricing__btn investButton">Invest Now</a>
                         </div>
                     </div>
                 @endforeach
 
+
             </div>
         </div>
-    </div>
+    </section>
+    <!--Pricing End-->
 
 
 @endsection

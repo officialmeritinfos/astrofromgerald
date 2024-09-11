@@ -1,35 +1,21 @@
 @extends('home.base')
 @section('content')
-    <!-- page-banner start -->
-    <section class="page-banner pt-xs-60 pt-sm-80 overflow-hidden">
+    <!--Page Header Start-->
+    <section class="page-header mb-3">
+        <div class="page-header-bg" style="background-image: url({{asset('home/templates/bit_gold/invetoro/assets/images/banner.jpg')}})">
+        </div>
         <div class="container">
-            <div class="row align-items-center">
-                <div class="col-md-6">
-                    <div class="page-banner__content mb-xs-10 mb-sm-15 mb-md-15 mb-20">
-                        <div class="transparent-text">{{$pageName}}</div>
-                        <div class="page-title">
-                            <h1>{{$pageName}}</h1>
-                        </div>
-                    </div>
-
-                    <nav aria-label="breadcrumb">
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="{{url('/')}}">Home</a></li>
-                            <li class="breadcrumb-item active" aria-current="page">{{$pageName}}</li>
-                        </ol>
-                    </nav>
-                </div>
-
-                <div class="col-md-6">
-                    <div class="page-banner__media mt-xs-30 mt-sm-40">
-                        <img src="{{asset('home/img/page-banner/page-banner-start.svg')}}" class="img-fluid start" alt="">
-                        <img src="{{asset('home/img/page-banner/page-banner.jpg')}}" class="img-fluid" alt="">
-                    </div>
-                </div>
+            <div class="page-header__inner">
+                <ul class="thm-breadcrumb list-unstyled">
+                    <li><a href="{{url('/')}}">Home</a></li>
+                    <li><span>/</span></li>
+                    <li class="active">{{$pageName}}</li>
+                </ul>
+                <h2>{{$pageName}}</h2>
             </div>
         </div>
     </section>
-    <!-- page-banner end -->
+    <!--Page Header End-->
 
 
     <!--About One Start-->

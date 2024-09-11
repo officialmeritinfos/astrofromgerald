@@ -336,5 +336,19 @@ class HomeController extends Controller
         return back()->with('success','Calculation sent to your mail');
 
     }
+
+    public function ico()
+    {
+        $web = GeneralSetting::where('id',1)->first();
+
+        $dataView = [
+            'siteName'  => $web->name,
+            'web'       => $web,
+            'pageName'  => 'ICO',
+            'packages'  => Package::where('status',1)->get()
+        ];
+
+        return view('home.ico',$dataView);
+    }
 }
 
