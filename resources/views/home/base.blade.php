@@ -15,15 +15,15 @@
     <link rel="apple-touch-icon" href="{{asset('home/images/'.$web->logo)}}">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black">
-    <meta name="apple-mobile-web-app-title" content="Invetoro - Home">
+    <meta name="apple-mobile-web-app-title" content="{{ $siteName }} - Home">
 
-    <meta itemprop="name" content="Invetoro - Home">
+    <meta itemprop="name" content="{{ $siteName }} - Home">
     <meta itemprop="description" content="">
     <meta itemprop="image" content="{{asset('home/images/'.$web->logo)}}">
 
     <meta property="og:type" content="website">
-    <meta property="og:title" content="Invetoro - Cryptocurrency Investment System">
-    <meta property="og:description" content="Invetoro - Earn High Profit, Online investment, Online earning">
+    <meta property="og:title" content="{{ $siteName }} - Cryptocurrency Investment Company">
+    <meta property="og:description" content="{{ $siteName }} - Earn High Profit, Online investment, Online earning">
     <meta property="og:image" content="{{asset('home/images/'.$web->logo)}}" />
     <meta property="og:image:type" content="image/png" />
     <meta property="og:image:width" content="600" />
