@@ -14,7 +14,7 @@
     <div class="container container-fullscreen">
         <div class="text-middle text-center text-light">
 
-            <div class="lineInfoTop" style="position: absolute;margin-top: -40px">
+            <div class="lineInfoTop" style="position: absolute;margin-top: -10px">
                 <div class="timeBl">
                     <span class="iconBl icon-clock-22"></span>
                     <span id="date"></span>
@@ -247,7 +247,8 @@
                     </div>
                     <h3 class="pricing__title">{{$package->name}}</h3>
                     <h2 class="pricing__rate">{{$package->roi}}%
-                        <span>/{{$option->getReturnType($package->returnType)}}</span></h2>
+                        <span>/{{$option->getReturnType($package->returnType)}}</span>
+                    </h2>
 
                     <div class="pricing__service">
                         <ul class="list-unstyled pricing__service-list">

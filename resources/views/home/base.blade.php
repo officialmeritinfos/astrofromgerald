@@ -203,8 +203,6 @@
                     alt="" width="50">
             </a>
         </div>
-
-        <div id="google_translate_element"></div>
         <!--Site Footer Start-->
         <footer class="site-footer">
             <div class="site-footer-bg-1 wow slideInLeft" data-wow-delay="100ms" data-wow-duration="2500ms"
@@ -384,6 +382,58 @@
 
 
 
+    <!-- Google language start -->
+    <style>
+        #google_translate_element {
+            z-index: 9999999;
+            position: fixed;
+            bottom: 25px;
+            left: 15px;
+        }
+
+        .goog-te-gadget {
+            font-family: Roboto, "Open Sans", sans-serif !important;
+            text-transform: uppercase;
+        }
+
+        .goog-te-gadget-simple {
+            padding: 0px !important;
+            line-height: 1.428571429;
+            color: white;
+            vertical-align: middle;
+            background-color: black;
+            border: 1px solid #a5a5a599;
+            border-radius: 4px;
+            float: right;
+            margin-top: -4px;
+            z-index: 999999;
+        }
+
+        .goog-te-banner-frame.skiptranslate {
+            display: none !important;
+            color: white;
+        }
+
+        .goog-te-gadget-icon {
+            background: none !important;
+            display: none;
+            color: white;
+        }
+
+        .goog-te-gadget-simple .goog-te-menu-value {
+            font-size: 12px;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+    </style>
+    <script type="text/javascript">
+        function googleTranslateElementInit() {
+            new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
+        }
+    </script>
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
+    </script>
+    <div id="google_translate_element"></div>
 
     <script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/jquery/jquery-3.6.0.min.js')}}"></script>
     <script src="{{asset('home/templates/bit_gold/invetoro/assets/vendors/bootstrap/js/bootstrap.bundle.min.js')}}">
@@ -432,57 +482,7 @@
     <link rel="stylesheet" href="{{asset('home/templates/bit_gold/css/iziToast.min.css')}}">
     <script src="{{asset('home/templates/bit_gold/js/iziToast.min.js')}}"></script>
 
-    <!-- Google language start -->
-    <style>
-        #google_translate_element {
-            z-index: 9999999;
-            position: fixed;
-            bottom: 25px;
-            left: 15px;
-        }
 
-        .goog-te-gadget {
-            font-family: Roboto, "Open Sans", sans-serif !important;
-            text-transform: uppercase;
-        }
-
-        .goog-te-gadget-simple {
-            padding: 0px !important;
-            line-height: 1.428571429;
-            color: white;
-            vertical-align: middle;
-            background-color: black;
-            border: 1px solid #a5a5a599;
-            border-radius: 4px;
-            float: right;
-            margin-top: -4px;
-            z-index: 999999;
-        }
-
-        .goog-te-banner-frame.skiptranslate {
-            display: none !important;
-            color: white;
-        }
-
-        .goog-te-gadget-icon {
-            background: none !important;
-            display: none;
-            color: white;
-        }
-
-        .goog-te-gadget-simple .goog-te-menu-value {
-            font-size: 12px;
-            color: white;
-            font-family: 'Open Sans', sans-serif;
-        }
-    </style>
-    <script type="text/javascript">
-        function googleTranslateElementInit() {
-        new google.translate.TranslateElement({pageLanguage: 'en'}, 'google_translate_element');
-    }
-    </script>
-    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-    </script>
 
     <script>
         "use strict";
