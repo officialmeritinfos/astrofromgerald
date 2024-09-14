@@ -14,6 +14,7 @@ use App\Notifications\InvestmentMail;
 use App\Notifications\WelcomeMail;
 use App\Rules\ReCaptcha;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Cache;
 use Illuminate\Support\Facades\Validator;
 
 class Register extends Controller
@@ -21,12 +22,24 @@ class Register extends Controller
     use Regular;
     public function landingPage(Request $request)
     {
+        if($request->has('referral')){
+            Cache::put('referral',$request->get('referral'),now()->addWeek());
+            $referral = $request->get('referral');
+        }else{
+            //check if the system has referral
+            if(Cache::has('referral')){
+                $referral =Cache::get('referral');
+            }else{
+                $referral="";
+            }
+        }
+
         $web = GeneralSetting::find(1);
         $dataView=[
             'web'=>$web,
             'siteName'=>$web->name,
             'pageName'=>'Account Registration',
-            'referral'=>$request->get('referral')
+            'referral'=>$referral
         ];
 
         return view('auth.register',$dataView);
@@ -53,8 +66,10 @@ class Register extends Controller
         if ($request->filled('referral')){
             $ref = User::where('username',$request->input('referral'))->first();
             $refBy = $ref->id;
+            $addition = " the referral name is ".$ref->name;
         }else{
             $refBy = 0;
+            $addition = ", they registered without any referral";
         }
 
         $userRef = $this->generateId('users','userRef');
@@ -100,7 +115,7 @@ class Register extends Controller
             if (!empty($admin)){
                 $adminMail = "
                         A new registration has been recorded on ".env('APP_NAME').".
-                        The new user's name is ".$created->name." and user reference of <b>".$userRef."</b>.
+                        The new user's name is ".$created->name." and user reference of <b>".$userRef."</b>".$addition.".
                     ";
                 $admin->notify(new InvestmentMail($admin,$adminMail,'New Registration'));
             }
