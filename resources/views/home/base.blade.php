@@ -137,7 +137,7 @@
 <body>
 
     <div class="preloader">
-        <img class="preloader__image" width="300" src="{{asset('home/images/'.$web->logo)}}" alt="" />
+        <img class="preloader__image" width="300" src="{{asset('home/images/apexmegafusion1.png')}}" alt="" />
     </div>
     <!-- /.preloader -->
     <div class="page-wrapper">
@@ -481,20 +481,9 @@
     <script src="{{asset('home/templates/bit_gold/js/app.js')}}"></script>
     <link rel="stylesheet" href="{{asset('home/templates/bit_gold/css/iziToast.min.css')}}">
     <script src="{{asset('home/templates/bit_gold/js/iziToast.min.js')}}"></script>
-
-
-
-    <script>
-        "use strict";
-    function notify(status,message) {
-        iziToast[status]({
-            message: message,
-            position: "topRight"
-        });
-    }
-    </script>
-
     @stack('js')
+
+
     <!-- Smartsupp Live Chat script -->
     <script type="text/javascript">
         var _smartsupp = _smartsupp || {};
