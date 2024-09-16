@@ -160,7 +160,7 @@
                     </div>
                     <div class="trusted-company__person">
                         <div class="trusted-company__person-img">
-                            <img src="{{asset('home/images/ceo.png')}}" style="width: 50px;" alt="">
+                            <img src="{{asset('home/images/ceo.PNG')}}" style="width: 50px;" alt="">
                         </div>
                         <div class="trusted-company__person-content">
                             <h2 class="trusted-company__person-name">David PervoL</h2>
@@ -881,6 +881,109 @@
                         </div>
                         <h5 class="testimonial-two__client-name">Ludwig Mark</h5>
                         <p class="testimonial-two__client-title">User From USA</p>
+                    </div>
+                    <div class="testimonial-two-shape">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/shapes/testimonial-two-shape.png')}}"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-two__single">
+                <div class="testimonial-two__single-inner">
+                    <div class="testimonial-two__icon">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/icon/testimonial-two-icon.png')}}"
+                            alt="">
+                    </div>
+                    <p class="testimonial-two__text">
+                        Investing with {{ $siteName }} has been a game-changer for my financial world.
+                        My first investment of $150 grew to yield over $1000 and that increased my faith in
+                        them.
+                    </p>
+                    <div class="testimonial-two__client-info">
+                        <div class="testimonial-two__client-img">
+                            <img src="{{asset('home/images/test2.PNG')}}" alt="" style="width: 100px;">
+                        </div>
+                        <h5 class="testimonial-two__client-name">Kathrin Ostermann</h5>
+                        <p class="testimonial-two__client-title">User From Poland</p>
+                    </div>
+                    <div class="testimonial-two-shape">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/shapes/testimonial-two-shape.png')}}"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="testimonial-two__single">
+                <div class="testimonial-two__single-inner">
+                    <div class="testimonial-two__icon">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/icon/testimonial-two-icon.png')}}"
+                            alt="">
+                    </div>
+                    <p class="testimonial-two__text">
+                        {{ $siteName }} is simply the best. They Have been very helpful on my journey building a great
+                        investment portfolio.
+                    </p>
+                    <div class="testimonial-two__client-info">
+                        <div class="testimonial-two__client-img">
+                            <img src="{{asset('home/images/test3.PNG')}}" alt="" style="width: 100px;">
+                        </div>
+                        <h5 class="testimonial-two__client-name">Abelardo Milano</h5>
+                        <p class="testimonial-two__client-title">User From USA</p>
+                    </div>
+                    <div class="testimonial-two-shape">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/shapes/testimonial-two-shape.png')}}"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-two__single">
+                <div class="testimonial-two__single-inner">
+                    <div class="testimonial-two__icon">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/icon/testimonial-two-icon.png')}}"
+                            alt="">
+                    </div>
+                    <p class="testimonial-two__text">
+                        Navigating the world of financial freedom has been a hectic journey for me until I met
+                        with
+                        {{ $siteName }}. Since then, I just relax and plan my vacation from my returns on
+                        {{ $siteName }}.
+                    </p>
+                    </p>
+                    <div class="testimonial-two__client-info">
+                        <div class="testimonial-two__client-img">
+                            <img src="{{asset('home/images/test4.PNG')}}" alt="" style="width: 100px;">
+                        </div>
+                        <h5 class="testimonial-two__client-name">Marco Gersten</h5>
+                        <p class="testimonial-two__client-title">User From Albenia</p>
+                    </div>
+                    <div class="testimonial-two-shape">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/shapes/testimonial-two-shape.png')}}"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-two__single">
+                <div class="testimonial-two__single-inner">
+                    <div class="testimonial-two__icon">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/icon/testimonial-two-icon.png')}}"
+                            alt="">
+                    </div>
+                    <p class="testimonial-two__text">
+                        Beginner friendly, with an active support all through the journey. What more can you ask than
+                        peace of mind when
+                        trading/investing? Thanks {{ $siteName }}
+                    </p>
+                    </p>
+                    <div class="testimonial-two__client-info">
+                        <div class="testimonial-two__client-img">
+                            <img src="{{asset('home/images/test5.PNG')}}" alt="" style="width: 100px;">
+                        </div>
+                        <h5 class="testimonial-two__client-name">Frank Ackermann</h5>
+                        <p class="testimonial-two__client-title">User From UK</p>
                     </div>
                     <div class="testimonial-two-shape">
                         <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/shapes/testimonial-two-shape.png')}}"

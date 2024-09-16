@@ -123,7 +123,7 @@
                     </div>
                     <div class="trusted-company__person">
                         <div class="trusted-company__person-img">
-                            <img src="{{asset('home/images/ceo.png')}}" style="width: 50px;" alt="">
+                            <img src="{{asset('home/images/ceo.PNG')}}" style="width: 50px;" alt="">
                         </div>
                         <div class="trusted-company__person-content">
                             <h2 class="trusted-company__person-name">David PervoL</h2>
