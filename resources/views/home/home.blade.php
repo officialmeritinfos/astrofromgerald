@@ -160,8 +160,7 @@
                     </div>
                     <div class="trusted-company__person">
                         <div class="trusted-company__person-img">
-                            <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/resources/trusted-company-person-img.jpg')}}"
-                                alt="">
+                            <img src="{{asset('home/images/ceo.png')}}" style="width: 50px;" alt="">
                         </div>
                         <div class="trusted-company__person-content">
                             <h2 class="trusted-company__person-name">David PervoL</h2>
@@ -874,6 +873,28 @@
                             alt="">
                     </div>
                     <p class="testimonial-two__text">
+                        Fantastic, awesome and legit. Their customer support will make your day every time, everyday.
+                    </p>
+                    <div class="testimonial-two__client-info">
+                        <div class="testimonial-two__client-img">
+                            <img src="{{asset('home/images/test1.png')}}" alt="" style="width: 100px;">
+                        </div>
+                        <h5 class="testimonial-two__client-name">Ludwig Mark</h5>
+                        <p class="testimonial-two__client-title">User From USA</p>
+                    </div>
+                    <div class="testimonial-two-shape">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/shapes/testimonial-two-shape.png')}}"
+                            alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="testimonial-two__single">
+                <div class="testimonial-two__single-inner">
+                    <div class="testimonial-two__icon">
+                        <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/icon/testimonial-two-icon.png')}}"
+                            alt="">
+                    </div>
+                    <p class="testimonial-two__text">
                         I have invested with this platform and gotten my money in my account. This is legit and safe.
                         Great doing business with them.</p>
                     <div class="testimonial-two__client-info">
@@ -889,6 +910,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="testimonial-two__single">
                 <div class="testimonial-two__single-inner">
                     <div class="testimonial-two__icon">
@@ -911,6 +933,7 @@
                     </div>
                 </div>
             </div>
+
             <div class="testimonial-two__single">
                 <div class="testimonial-two__single-inner">
                     <div class="testimonial-two__icon">

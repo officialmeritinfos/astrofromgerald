@@ -123,8 +123,7 @@
                     </div>
                     <div class="trusted-company__person">
                         <div class="trusted-company__person-img">
-                            <img src="{{asset('home/templates/bit_gold/invetoro/assets/images/resources/trusted-company-person-img.jpg')}}"
-                                alt="">
+                            <img src="{{asset('home/images/ceo.png')}}" style="width: 50px;" alt="">
                         </div>
                         <div class="trusted-company__person-content">
                             <h2 class="trusted-company__person-name">David PervoL</h2>
@@ -275,7 +274,7 @@
                 <!--Team One Single-->
                 <div class="team-one__single">
                     <div class="team-one__img">
-                        <img src="{{asset('home/images/frontend/team/61b879e9e02ca1639479785.jpg')}}" alt="">
+                        <img src="{{asset('home/images/ceo.png')}}" alt="">
                         <ul class="list-unstyled team-one__social">
                             <li><a href="#"><i class="fab fa-twitter"></i></a></li>
                             <li><a href="#"><i class="fab fa-facebook"></i></a></li>
