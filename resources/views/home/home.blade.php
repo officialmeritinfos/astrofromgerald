@@ -877,7 +877,7 @@
                     </p>
                     <div class="testimonial-two__client-info">
                         <div class="testimonial-two__client-img">
-                            <img src="{{asset('home/images/test1.png')}}" alt="" style="width: 100px;">
+                            <img src="{{asset('home/images/test1.PNG')}}" alt="" style="width: 100px;">
                         </div>
                         <h5 class="testimonial-two__client-name">Ludwig Mark</h5>
                         <p class="testimonial-two__client-title">User From USA</p>
